@@ -34,15 +34,20 @@ for index, event_block in \
   # Define the actual data.
   event = {}
 
+  event_title = event_block.find('h2')
+  event_title.find('a')
+  print event_title
+  # print "Title: " + event_title
+
   event_info = event_block.find('div', class_="event_info")
   event_info = event_info.text.lstrip().rstrip()
-  print "Info: " + event_info
+  # print "Info: " + event_info
 
   event_date= event_block.find('div', class_="event-date")
   event_date = event_date.text.lstrip().rstrip()
   # TODO: Convert into a date object.
   # event_date = time.strptime(event_date, "")
-  print "Date: " + event_date
+  # print "Date: " + event_date
 
 # print request
 # print soup
